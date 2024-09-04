@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Omnifood is an AI-powered food subscription that will make you eat healthy adain, 365 days per year. It's toilored to your personal tastes and nutritional needs."
+    />
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +25,14 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" />
-    <title>Omnifood</title>
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+
+    <script defer src="js/script.js"></script>
+
+    <title>Omnifood &mdash; Never cook again</title>
   </head>
   <body>
     <header class="header">
@@ -27,11 +41,13 @@
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">How it works</a></li>
-          <li><a class="main-nav-link" href="#">Meals</a></li>
-          <li><a class="main-nav-link" href="#">Testimonials</a></li>
-          <li><a class="main-nav-link" href="#">Pricing</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
+          <li><a class="main-nav-link" href="#how">How it works</a></li>
+          <li><a class="main-nav-link" href="#meals">Meals</a></li>
+          <li>
+            <a class="main-nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li><a class="main-nav-link" href="#pricing">Pricing</a></li>
+          <li><a class="main-nav-link nav-cta" href="#cta">Try for free</a></li>
         </ul>
       </nav>
       <button class="btn-mobile-nav">
@@ -54,7 +70,7 @@
             <a href="#" class="btn btn--full margin-right-sm"
               >Start Eating Well</a
             >
-            <a href="#" class="btn btn--outline">Learn More &darr;</a>
+            <a href="#how" class="btn btn--outline">Learn More &darr;</a>
             <div class="delivered-meals">
               <div class="delivered-img">
                 <img src="img/customers/customer-1.jpg" alt="Customer photo" />
@@ -71,11 +87,15 @@
           </div>
 
           <div class="hero-image-box">
-            <img
-              src="img/hero.png"
-              class="hero-img"
-              alt="woman enjoying food and a food bowl on a table"
-            />
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero.png" type="image/png" />
+              <img
+                src="img/hero.webp"
+                class="hero-img"
+                alt="woman enjoying food and a food bowl on a table"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -94,7 +114,7 @@
           </div>
         </div>
       </section>
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <span class="subheading">How it works</span>
           <h2 class="heading-secondary">
@@ -155,7 +175,7 @@
           </div>
         </div>
       </section>
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container center-text">
           <span class="subheading">Meals</span>
           <h2 class="heading-secondary">
@@ -198,7 +218,7 @@
             <img
               src="img/meals/meal-2.jpg"
               class="meal-img"
-              alt="Japanese Gyozas"
+              alt="Avocado Salad"
             />
             <div class="meal-content">
               <div class="meal-tags">
@@ -272,13 +292,17 @@
           <a href="#" class="link">See all recipes &rarr;</a>
         </div>
       </section>
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="testimonials">
         <div class="testimonials-container">
           <span class="subheading">Testimonials</span>
           <h2 class="heading-secondary">Once you try it you can not go back</h2>
           <div class="testimonials">
             <figure class="testimonial">
-              <img class="testimonial-img" src="img/customers/dave.jpg" />
+              <img
+                class="testimonial-img"
+                src="img/customers/dave.jpg"
+                alt=" testimonial"
+              />
               <blockquote class="testimonial-text">
                 Inexpensive, healthy and great-tasting meals, without even
                 having to order manually! It feels truly magical.
@@ -286,7 +310,11 @@
               <p class="testimonial-name">&mdash; Dave Bryson</p>
             </figure>
             <figure class="testimonial">
-              <img class="testimonial-img" src="img/customers/ben.jpg" />
+              <img
+                class="testimonial-img"
+                src="img/customers/ben.jpg"
+                alt=" testimonial"
+              />
               <blockquote class="testimonial-text">
                 The AI algorithm is crazy good, it chooses the right meals for
                 me every time. It's amazing not to worry about food anymore!
@@ -294,7 +322,11 @@
               <p class="testimonial-name">&mdash; Ben Hadley</p>
             </figure>
             <figure class="testimonial">
-              <img class="testimonial-img" src="img/customers/steve.jpg" />
+              <img
+                class="testimonial-img"
+                src="img/customers/steve.jpg"
+                alt=" testimonial"
+              />
               <blockquote class="testimonial-text">
                 Omnifood is a life saver! I just started a company, so there's
                 no time for cooking. I couldn't live without my daily meals now!
@@ -302,7 +334,11 @@
               <p class="testimonial-name">&mdash; Steve Millern</p>
             </figure>
             <figure class="testimonial">
-              <img class="testimonial-img" src="img/customers/hannah.jpg" />
+              <img
+                class="testimonial-img"
+                src="img/customers/hannah.jpg"
+                alt=" testimonial"
+              />
               <blockquote class="testimonial-text">
                 I got Omnifood for the whole family, and it frees up so much
                 time! Plus, everything is organic and vegan and without plastic.
@@ -387,7 +423,7 @@
           </figure>
         </div>
       </section>
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
           <span class="subheading">Pricing</span>
           <h2 class="heading-secondary">
@@ -493,7 +529,7 @@
           </div>
         </div>
       </section>
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
@@ -573,7 +609,8 @@
             </li>
           </ul>
           <p class="copyright">
-            Copyright &copy; 2027 by Omnifood.All rights reserved
+            Copyright &copy; <span class="year">2027</span> by Omnifood.All
+            rights reserved
           </p>
         </div>
         <div class="address-col">
